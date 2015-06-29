@@ -8,7 +8,7 @@ The page should have a list of funds where each fund has a dropdown to change *s
 When a *share class* is selected/changed, it should get (using AJAX) the line chart (HighCharts perferably) data for that specific ISIN - however the data response would be the same, pass the following parameters to the chart call:
 - `from` date (unix timestamp)
 - `to` date (unix timestamp)
-- isin` (string)
+- `isin` (string)
 
 When making the call for the line chart, make sure a **valid** ISIN is passed (see `"ISIN Code": "GB00BGnotvalid"` in `funds.json`) - otherwise show an error message to the user.
 
