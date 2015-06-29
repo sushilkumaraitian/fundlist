@@ -1,27 +1,27 @@
 # KURTOSYS Front-end test
 
 # The task
-Create an angular application which shows the fund and share classes information on a page.
-The page should have a list of funds where each fund has a dropdown to change share class on that specific fund. By default, the first share class is selected.
+Create an angular application which shows the fund and *share class*es information on a page.
+The page should have a list of funds where each fund has a dropdown to change *share class* on that specific fund. By default, the first *share class* is selected.
 
 ## Requirements
-When a share class is selected/changed, it should get (using AJAX) the line chart (HighCharts perferably) data for that specific ISIN - however the data response would be the same, pass the following parameters to the chart call:
+When a *share class* is selected/changed, it should get (using AJAX) the line chart (HighCharts perferably) data for that specific ISIN - however the data response would be the same, pass the following parameters to the chart call:
 - "from" date (unix timestamp)
 - "to" date (unix timestamp)
 - isin (string)
 
 When making the call for the line chart, make sure a **valid** ISIN is passed (see `"ISIN Code": "GB00BGnotvalid"` in `funds.json`) - otherwise show an error message to the user.
 
-- The fund list should show data properties from the fund itself and data from share class (see `funds.json`'s structure). Show at least 5 fund- and 5 share class level property beside the following ones.
+- The fund list should show data properties from the fund itself and data from *share class* (see `funds.json`'s structure). Show at least 5 fund- and 5 *share class* level property beside the following ones.
 - If a property is empty: a dash should appear.
 - Show `"Lauch Date"` property as `"MM/DD/YYYY"`, other dates should be formatted as `"DD MMM YYYY"`
 - Show `"Compound Return 1 Year Annual"` and `"NAV Base"`. Should have 2 decimal places and thousand separators.
-- If the fund is older than 4 year (see `"Lauch Date"` property), show the share class properties as a list (`<ul>`) instead of a table
+- If the fund is older than 4 year (see `"Lauch Date"` property), show the *share class* properties as a list (`<ul>`) instead of a table
 
 See a working example here: http://fe2.jpmorgan.com
 
 # Data to be used
-- `funds.json`: contains the fund and share class data.
+- `funds.json`: contains the fund and *share class* data.
 - `chart.json`: contains data for line chart
 
 # Project structure
