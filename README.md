@@ -5,12 +5,14 @@ Create an angular application which shows the fund and *share class*es informati
 The page should have a list of funds where each fund has a dropdown to change *share class* on that specific fund. By default, the first *share class* is selected.
 
 ## Requirements
-When a *share class* is selected/changed, it should get (using AJAX) the line chart (HighCharts perferably) data for that specific ISIN - however the data response would be the same, pass the following parameters to the chart call:
+Get the `funds.json` by an AJAX call. Show properties described below.
+
+When a *share class* is selected/changed, it should get the line chart data for that specific ISIN - however the data response would be the same, pass the following parameters to the chart call:
 - `from` date (unix timestamp)
 - `to` date (unix timestamp)
-- `isin` (string)
+- isin` (string)
 
-When making the call for the line chart, make sure a **valid** ISIN is passed (see `"ISIN Code": "GB00BGnotvalid"` in `funds.json`) - otherwise show an error message to the user.
+When making the AJAX call for the line chart, make sure a **valid** ISIN is passed (see `"ISIN Code": "GB00BGnotvalid"` in `funds.json`) - otherwise show an error message to the user.
 
 - The fund list should show data properties from the fund itself and data from *share class* (see `funds.json`'s structure). Show at least 5 fund-level property and 5 *share class*-level property beside the following ones.
 - If a property is empty: a dash should appear.
