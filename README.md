@@ -1,3 +1,5 @@
+# KURTOSYS Front-end test
+
 # The task
 Create an angular application which shows the fund and share classes information on a page.
 The page should have a list of funds where each fund has a dropdown to change share class on that specific fund. By default, the first share class is selected.
