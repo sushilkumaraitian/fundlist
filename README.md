@@ -45,7 +45,7 @@ You can use any kind of `yeoman` generator to create the structure, like:
 
 # How to send the test?
 Fork this repository and make the changes on it.
-Commit as many states as you while developing.
+Commit as many states as you can while developing.
 Send only the link to your repository. **DON'T CREATE A PULL-REQUEST!**
 
 ### gl;hf :)
