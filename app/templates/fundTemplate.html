@@ -1,0 +1,60 @@
+<div class='fund'>
+	<div class="col-md-12 fund_header">
+		<div class='fund__heading col-md-8'>
+			<h1>{{fund.name}}</h1>
+		</div>
+		<div class='fund__shareClass col-md-4'>
+			<div class="col-md-7 text-right">
+				<h2>Share Class</h2>
+			</div>
+			<div class="col-md-5 pull-right">
+				<select ng-model="selectedShareClass" ng-init="selectedShareClass = selectedShareClass || fund.shareClasses[0]"  ng-options="shareClass['Bloomberg Code'] for shareClass in fund.shareClasses track by shareClass['Bloomberg Code']" ng-change="drawChart(selectedShareClass)"></select>
+			</div>
+		</div>		
+	</div>
+	<div class="fund_shareInfo">
+		<table>
+			<colgroup>
+				<col>
+				<col>
+				<col>
+				<col>
+				<col>
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<td>ISIN</td>
+					<td>{{selectedShareClass["ISIN Code"]}}</td>
+					<td>Launch Date</td>
+					<td>{{launchDateFormatter(selectedShareClass["Launch Date"])}}</td>
+					<td>Yield</td>
+					<td>{{selectedShareClass["Yield Current"]}}</td>
+				</tr>
+				<tr>
+					<td>Currency</td>
+					<td>{{selectedShareClass["Fund Currency Code"]}}</td>
+					<td>LipperId</td>
+					<td>{{selectedShareClass["LipperId"]}}</td>
+					<td>DATE</td>
+					<td>04 JAN 1987</td>
+				</tr>
+				<tr>
+					<td>Asset Class</td>
+					<td>{{selectedShareClass["Asset Class Taxonomy Id"]}}</td>
+					<td>Morningstar Ratings</td>
+					<td>
+						<i ng-repeat="i in getTimes(selectedShareClass['Morningstar - SRRI Track Risk Rating'])" class="glyphicon glyphicon-star"></i>
+					</td>
+					<td>NAV</td>
+					<td>{{selectedShareClass["NAV Base"]}}</td>
+				</tr>
+				<tr>
+					<td>Region</td>
+					<td>{{selectedShareClass["Region Taxonomy Id"]}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div ng-init = "drawChart(selectedShareClass)" class="col-md-11 chartContainer"></div>
+</div>

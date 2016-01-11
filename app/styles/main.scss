@@ -1,0 +1,104 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+html, body {
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  padding: 50px 0 0px 0;
+}
+
+.funds{
+  my-fund:nth-of-type(1){
+      .fund{
+        margin-top: 0px;
+      }
+  }  
+  margin-bottom: 50px;
+  border: 10px solid #eaedf1;
+  background-color: #eaedf1;
+  .fund{
+    display: inline-block;
+    vertical-align: bottom;
+    background-color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #e2e2e3;
+    .chartContainer span{
+      display: block;
+      width: 100%;
+      margin: 100px 0 100px 0;
+      color: Red;
+      font-size: 20px;
+      text-align: center;
+    }
+    h1{
+      margin: 0;
+      font-size: 20px;
+      color: #88abd5;
+    }
+    h2{
+      margin: 0;
+      font-size: 18px;
+    }
+    .fund_header{
+      padding: 10px 0 20px 15px;
+      border-bottom: 1px solid #e2e2e3;
+    }
+    .fund_shareInfo{
+      float: left;
+      margin-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e2e2e3;
+    }
+    table {
+      margin-top:10px;
+      col{
+        &:first-child {
+          width: 18%;
+          border-left: 0;
+        }
+        &:nth-child(2) {
+          width: 25%;
+        }
+        &:nth-child(6) {
+          width: 20%;
+        }
+        &:nth-child(4) {
+          width: 19%;
+        }                
+        &:nth-child(2n+3) {
+          border-left: 3px solid #fff;
+          width: 19%;       
+        }
+        &:nth-child(5) {
+          width: 9%;
+        }        
+      }
+      tbody tr{
+        &:nth-child(odd) {
+          background: #f5f5f5;
+        } 
+        td {
+          padding: 3px 8px;
+          color: #6d6e71;
+          font-size: 16px;
+      }
+    }
+   }
+}
+}
